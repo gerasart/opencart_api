@@ -73,6 +73,7 @@ class ControllerExtensionFeedRestApi extends Controller {
 
 	public function check() {
 
+		//in future i add safe condition to products()
 		if($this->debugIt)
 		print_r($_SERVER);
 
