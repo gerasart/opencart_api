@@ -3,7 +3,6 @@
 class ControllerExtensionFeedRestApi extends Controller {
 
 	private $debugIt = false;
-	private $ip;
 	
 	/*
 	* Get products
