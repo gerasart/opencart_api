@@ -2,6 +2,4 @@
 
 # List
 
-Get @params [int categoryId, int limit, int offset]
-
-- /index.php?route=extension/api/products/get&limit=1
+- /index.php?route=extension/api/products/get&limit=1 (categoryId,limit, offset)
