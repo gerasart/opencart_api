@@ -1,6 +1,5 @@
-# opencart feed data api
+# Opencart 3 feed data api
 
-put this file in /catalog/controller/extension/feed
+# List
 
-its opencart 3 api, i creat to use products in json
-/index.php?route=extension/feed/rest_api/products
+- /index.php?route=extension/feed/products/execute
