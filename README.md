@@ -1,4 +1,4 @@
-# opencart_api
+# opencart feed data api
 
 put this file in /catalog/controller/extension/feed
 
