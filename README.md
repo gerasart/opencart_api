@@ -2,4 +2,4 @@
 
 # List
 
-- /index.php?route=extension/api/products/execute?limit=10
+- /index.php?route=extension/api/products/execute
