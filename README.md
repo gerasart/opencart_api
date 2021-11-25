@@ -2,4 +2,4 @@
 
 # List
 
-- /index.php?route=extension/api/products/get&limit=1 (categoryId,limit, offset)
+- Products: /index.php?route=extension/api/products/get&limit=1 (categoryId,limit, offset)
