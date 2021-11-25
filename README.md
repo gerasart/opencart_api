@@ -1,4 +1,4 @@
-# Opencart 3 feed data api
+# Opencart 3 API
 
 # List
 
