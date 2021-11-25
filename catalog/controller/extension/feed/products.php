@@ -1,11 +1,11 @@
 <?php
 
-class ControllerExtensionFeedRestApi extends Controller
+class ControllerExtensionFeedProducts extends Controller
 {
     /**
      * Show product in json format.
      */
-    public function products(): void
+    public function execute(): void
     {
         $this->load->model('catalog/product');
         $result      = ['success' => true, 'products' => []];
