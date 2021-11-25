@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-class ControllerExtensionFeedProducts extends Controller
+class ControllerExtensionApiProducts extends Controller
 {
     /**
      * Show product in json format.
