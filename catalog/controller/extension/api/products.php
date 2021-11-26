@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+/**
+ * User: gerasart
+ * Site: seonarnia.com
+ */
 class ControllerExtensionApiProducts extends Controller
 {
     /**
@@ -11,12 +15,15 @@ class ControllerExtensionApiProducts extends Controller
     {
         $this->load->model('catalog/product');
         $this->load->model('tool/image');
-
-        $result = ['success' => true, 'products' => []];
+        $result = [
+            'code' => 200,
+            'message' => "success",
+            'data' => [],
+        ];
         $category_id = $this->request->get['categoryId'] ?? 0;
         $limit = $this->request->get['limit'] ?? 20;
         $offset = $this->request->get['offset'] ?? 0;
-   
+
         $products = $this->model_catalog_product->getProducts(
             [
                 'filter_category_id' => $category_id,
@@ -47,7 +54,7 @@ class ControllerExtensionApiProducts extends Controller
                 );
             }
 
-            $result['products'][] = [
+            $result['data'][] = [
                 'id' => $product['product_id'],
                 'name' => $product['name'],
                 'description' => $product['description'],
@@ -55,6 +62,7 @@ class ControllerExtensionApiProducts extends Controller
                 'href' => $this->url->link('product/product', 'product_id=' . $product['product_id']),
                 'thumb' => $image,
                 'special' => $special,
+                'minimum' => $product['minimum'] > 0 ? $product['minimum'] : 1,
                 'rating' => $product['rating'],
             ];
         }
