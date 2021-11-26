@@ -43,6 +43,9 @@ class ControllerExtensionApiCategories extends Controller
         $this->load->model('catalog/category');
         $this->load->model('tool/image');
 
+        $domain = $this->request->server['HTTP_HOST'] ?? '';
+        $isHttps = $this->request->server['HTTPS'] ?? '';
+        $https = $isHttps === '1' ? 'https://' : 'http://';
         $result = [];
         $categories = $this->model_catalog_category->getCategories($parent);
 
@@ -51,7 +54,7 @@ class ControllerExtensionApiCategories extends Controller
 
             foreach ($categories as $category) {
                 if ($category['image']) {
-                    $categoryImage = "/image/{$category['image']}";
+                    $categoryImage = $https . $domain . "/image/{$category['image']}";
                 } else {
                     $categoryImage = $this->model_tool_image->resize('placeholder.png', 120, 120);
                 }
