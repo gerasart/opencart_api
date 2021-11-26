@@ -9,6 +9,7 @@ class ControllerExtensionApiProducts extends Controller
 {
     /**
      * Show product in json format.
+     *
      * Get @params [int categoryId, int limit, int offset]
      */
     public function get(): void
