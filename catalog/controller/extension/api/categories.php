@@ -8,7 +8,7 @@ declare(strict_types=1);
 class ControllerExtensionApiCategories extends Controller
 {
     /**
-     * Show categories in json format.
+     * Return categories in json format.
      *
      * Get @params [int parent, int level]
      */
