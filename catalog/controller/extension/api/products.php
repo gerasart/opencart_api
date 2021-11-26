@@ -8,7 +8,7 @@ declare(strict_types=1);
 class ControllerExtensionApiProducts extends Controller
 {
     /**
-     * Show product in json format.
+     * Return product in json format.
      *
      * Get @params [int categoryId, int limit, int offset]
      */
